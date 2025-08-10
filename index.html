@@ -7,117 +7,160 @@
     <title>Sachila Geeth - Software Developer Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 </head>
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        
+        <a href="#" class="logo">Sachila Geeth</a>
+
         <nav class="navbar">
-            <a href="#home"  style="--i:1" class="active">Home</a>
+            <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About</a>
             <a href="#skills" style="--i:3">Skills</a>
             <a href="#portfolio" style="--i:4">Portfolio</a>
             <a href="#contact" style="--i:5">Contact</a>
-            <button class="theme-toggle" id="themeToggle">
-                <span id="themeIcon">🌙</span>
-            </button>
         </nav>
     </header>
     <main>
-       <!-- index.php - Home Section -->
-<!-- index.php - Home Section -->
-<section class="home" id="home">
-    <div class="home-container"> <!-- This wrapper helps in layout -->
-        <div class="home-content"> <!-- Your original text content structure -->
-            <h1>Hello, It's Me</h1>
-            <h4>Sachila Geeth</h4> <!-- Assuming this was part of your original design -->
-            <h3>And I'm a <span class="text"></span></h3> <!-- JS populates this based on your previous setup -->
-            <p>I'm a software engineer with a strong foundation in building robust and efficient applications.
-                 I studied at Asia University in Malaysia, where I gained a solid theoretical and practical understanding
-                 of software development principles.</p>
-            <div class="home-scl">
-                <a href="#" style="--i:7"><i class="fab fa-linkedin"></i></a>
-                <a href="#" style="--i:8"><i class="fab fa-github"></i></a>
-            </div>
-            <a href="#" class="btn-box">More About Me</a>
-            <a href="#" class="book-now-btn">Book Now</a>
-        </div>
-
-        <div class="home-image-area stacked-cards-gallery"> <!-- Image area for stacked cards -->
-            <div class="card-slider-wrapper">
-                <div class="hero-card card1">
-                    <img src="imgs/2024_08_14_13_17_IMG_8293.JPG" alt="Gallery Image 1">
-                </div>
-                <div class="hero-card card2">
-                    <img src="imgs/2024_08_17_16_20_IMG_8392.JPG" alt="Gallery Image 2">
-                </div>
-                <div class="hero-card card3">
-                    <img src="imgs/2024_08_14_13_17_IMG_8293.JPG" alt="Gallery Image 3">
-                </div>
-                <div class="hero-card card4">
-                    <img src="imgs/2024_08_14_13_17_IMG_8293.JPG" alt="Gallery Image 4">
-                </div>
-                <!-- Add more images as needed -->
-            </div>
-        </div>
-    </div>
-</section>
-         <section class="about" id="about">
-            <div class=" container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="about-img mt-5">
-                            <img src="/imgs/2024_08_14_13_17_IMG_8293.JPG">
-                        </div>
+        <section class="home" id="home">
+            <div class="home-container">
+                <div class="home-content">
+                    <h1>HELLO, MY NAME IS</h1>
+                    <h1>Sachila <span>Geeth</span></h1>
+                    <h3>And I'm a <span class="text"></span></h3>
+                    <p> I'm a software engineer passionate about building robust and efficient web applications,
+                        turning complex problems into elegant digital solutions.</p>
+                    <div class="social-link">
+                        <a href="#" style="--i:7"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="--i:8"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn-primary">Get In Touch</a>
                     </div>
                 </div>
-            </div> 
-            <div class="about-text">
-               <h2>About <span>Me</span></h2>
-               <h4>Full Stack Developer!</h4>
-               <p> I'm a passionate full-stack developer currently honing my skills as a student at Asia University, Malaysia.
-                 I'm driven by the desire to build robust, user-centric web applications that solve real-world problems.
-                  My coursework provides a solid foundation in software engineering principles, 
-                  while my personal projects allow me to experiment and grow my practical skills every day.</p>
-                  <a href="#" class="btn-box">More About Me</a>
+
+                <div class="home-image-area">
+                    <div class="background-text">
+                        ENGINEER
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="./imgs/me.png" alt="A professional photo of Sachila Geeth" class="hero-image">
+                    </div>
+                </div>
             </div>
-         </section>
-         <section>
+        </section>
+        <!-- ================================================================ -->
+        <!--              ABOUT SECTION (Corrected HTML)                      -->
+        <!-- ================================================================ -->
+
+        <section class="about" id="about">
+
+            <div class="about-me-container">
+
+                <div class="about-image-container" data-aos="fade-right">
+                    <img src="./imgs/me.png" alt="Sachila Geeth working">
+                </div>
+
+                <div class="about-content-container" data-aos="fade-left">
+                    <h2 class="section-heading-left">About Me</h2>
+                    <p class="about-paragraph">
+                        An enthusiastic Software Engineering undergraduate, Sachila Geeth with a keen interest in
+                        front-end and full-stack technologies. My primary goal is to gain practical, hands-on experience
+                        and translate my academic knowledge into real-world solutions.
+                    </p>
+
+                   
+            
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>2+</h3>
+                            <p>Years of Learning</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>4</h3>
+                            <p>Expertise Areas</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-primary" download>Download CV</a>
+                </div>
+            </div>
+
+            <div class="services-container">
+                <h2 class="section-heading-center" data-aos="fade-up">What I Do</h2>
+                <div class="services-grid">
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-code"></i>
+                        <h3>Full-Stack Development</h3>
+                        <p>Building robust and scalable web applications from front-end to back-end.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Creating intuitive, user-friendly interfaces. Proficient in Figma.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-globe"></i>
+                        <h3>Web Development</h3>
+                        <p>Developing responsive websites using modern tech like React, Laravel & Node.js.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-database"></i>
+                        <h3>Database Management</h3>
+                        <p>Designing and managing efficient database systems using MySQL and MongoDB.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
             <div class="services" id="services">
                 <div class="container ali">
                     <h1 class="sub-title"> My <span>services</span></h1>
                     <div class="services-list">
-                    <div>
-                        <i class='bx bx-code'  style='color:#e13a0d'  ></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Design engaging and functional web interfaces that align with your brand identity and meet user expectations.
-                            Design interfaces that look and perform beautifully on all devices, from desktops to smartphones, ensuring consistent user experiences.
-                        </p>
-                             <a href="#" class="read">Lern more</a>
+                        <div>
+                            <i class='bx bx-code' style='color:#e13a0d'></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Design engaging and functional web interfaces that align with your brand identity and
+                                meet user expectations.
+                                Design interfaces that look and perform beautifully on all devices, from desktops to
+                                smartphones, ensuring consistent user experiences.
+                            </p>
+                            <a href="#" class="read">Lern more</a>
+                        </div>
+                        <div>
+                            <i class="bx bx-crop" style="color: #e13a0d;"></i>
+                            <h2>Web Development</h2>
+                            <p>Design and develop responsive, user-friendly websites using modern technologies like
+                                HTML, CSS, JavaScript, React, Angular, and more.</p>
+                            <a href="#" class="read">Lern more</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-database" style="color: #e13a0d;"></i>
+                            <h2>Database Design & Management</h2>
+                            <p>Implement and manage efficient databases with SQL, MongoDB, or PostgreSQL to store and
+                                retrieve data effectively</p>
+                            <a href="#" class="read">Lern more</a>
+                        </div>
                     </div>
-                    <div>
-                        <i class="bx bx-crop" style="color: #e13a0d;"></i>
-                        <h2>Web Development</h2>
-                        <p>Design and develop responsive, user-friendly websites using modern technologies like HTML, CSS, JavaScript, React, Angular, and more.</p>
-                             <a href="#" class="read">Lern more</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-database" style="color: #e13a0d;"></i>
-                        <h2>Database Design & Management</h2>
-                        <p>Implement and manage efficient databases with SQL, MongoDB, or PostgreSQL to store and retrieve data effectively</p>
-                             <a href="#" class="read">Lern more</a>
-                    </div>
-                </div>    
                 </div>
             </div>
             <section>
@@ -157,7 +200,7 @@
                                 <span>PHP</span>
                             </div>
                             <div class="progress-line php">
-                                 <span data-progress="80"></span>
+                                <span data-progress="80"></span>
                             </div>
                         </div>
                         <div class="bar">
@@ -166,7 +209,7 @@
                                 <span>React</span>
                             </div>
                             <div class="progress-line Javafx">
-                                 <span data-progress="50"></span>
+                                <span data-progress="50"></span>
                             </div>
                         </div>
                     </div>
@@ -202,7 +245,7 @@
                             <div class="text">Problem Solving</div>
                         </div>
                         <div class="radial-bar">
-                             <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <svg x="0px" y="0px" viewBox="0 0 200 200">
                                 <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
                                 <circle class="path path-4" cx="100" cy="100" r="80"></circle>
                             </svg>
@@ -212,21 +255,22 @@
                     </div>
                 </div>
             </section>
-         </section>
+        </section>
 
-         <section>
+        <section>
             <div id="portfolio">
                 <div class="container">
                     <div class="main-text" id="project">
                         <h2 class="text-center">Latest <span class="text-center">Project</span></h2>
-            
+
                         <div class="portfolio-content ">
                             <div class="row">
                                 <img src="/imgs/download.jpeg" alt="Project 1">
                                 <div class="layer">
-                                    <h5 >UX/UI</h5>
+                                    <h5>UX/UI</h5>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Quia, natus laborum qui eligendi impedit enim eveniet minus provident quod nemo delectus,
+                                        Quia, natus laborum qui eligendi impedit enim eveniet minus provident quod nemo
+                                        delectus,
                                         deserunt consectetur corrupti accusamus debitis sit optio quas voluptates.</p>
                                     <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
                                 </div>
@@ -236,7 +280,8 @@
                                 <div class="layer">
                                     <h5>UX/UI</h5>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Quia, natus laborum qui eligendi impedit enim eveniet minus provident quod nemo delectus,
+                                        Quia, natus laborum qui eligendi impedit enim eveniet minus provident quod nemo
+                                        delectus,
                                         deserunt consectetur corrupti accusamus debitis sit optio quas voluptates.</p>
                                     <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
                                 </div>
@@ -246,7 +291,8 @@
                                 <div class="layer">
                                     <h5>UX/UI</h5>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Quia, natus laborum qui eligendi impedit enim eveniet minus provident quod nemo delectus,
+                                        Quia, natus laborum qui eligendi impedit enim eveniet minus provident quod nemo
+                                        delectus,
                                         deserunt consectetur corrupti accusamus debitis sit optio quas voluptates.</p>
                                     <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
                                 </div>
@@ -256,44 +302,51 @@
                 </div>
             </div>
         </section>
-        
-         
-         <section class="contact" id="contact">
-             <div class="contact-text">
-                 <h2>Contact <span>Me</span></h2>
-                 <h4>Let's Work Together</h4>
-                 <p>
-                     Feel free to reach out if you'd like to connect or have any questions.
-                 </p>
-                 <div class="contact-list">
-                     <i class="fas fa-envelope"></i>
-                     <a href="mailto:your.email@example.com">sachilageeth1@email.com</a>
-                     <li><i class="bx bxs-phone"></i>0775811481</li>
-                 </div>
-                 <div class="contact-icons">
+
+
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <h2>Contact <span>Me</span></h2>
+                <h4>Let's Work Together</h4>
+                <p>
+                    Feel free to reach out if you'd like to connect or have any questions.
+                </p>
+                <div class="contact-list">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:your.email@example.com">sachilageeth1@email.com</a>
+                    <li><i class="bx bxs-phone"></i>0775811481</li>
+                </div>
+                <div class="contact-icons">
                     <a href="https://www.facebook.com/yourprofile"><i class='bx bxl-facebook-circle'></i></a>
                     <a href="https://twitter.com/yourprofile"><i class='bx bxl-twitter'></i></a>
                     <a href="https://www.instagram.com/yourprofile"><i class='bx bxl-instagram'></i></a>
                     <a href="https://www.linkedin.com/in/yourprofile"><i class='bx bxl-linkedin'></i></a>
                 </div>
-             </div>
-             <div class="contact-form">
+            </div>
+            <div class="contact-form">
                 <form action="">
                     <input type="" placeholder="Enter Your Name" required>
                     <input type="email" placeholder="Enter Your Email" required>
 
-                    <input type="" placeholder="Enter Your Subject" >
+                    <input type="" placeholder="Enter Your Subject">
                     <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-                  <input type="submit" value="submit" class="send">
+                    <input type="submit" value="submit" class="send">
                 </form>
-             </div>
-         </section>
-         <div class="last-text">
+            </div>
+        </section>
+        <div class="last-text">
             <p>Developed with love by Sachila Geeth 2025</p>
-         </div>
-         <a href="" class="top" ><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+        <a href="" class="top"><i class='bx bx-up-arrow-alt'></i></a>
     </main>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    </script>
 </body>
 
 </html>

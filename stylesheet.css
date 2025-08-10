@@ -1,690 +1,189 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins' ,'sans-serif';
+:root {
+    --bg-color: #1F1F1F;
+    --primary-text-color: #F5F5F5;
+    --secondary-text-color: #A0A0A0;
+    --accent-color: #FF6B00;
+    --header-height: 3.5rem;
 }
 body {
-    color: #051129; 
-    background: #fff;
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
-/* styles.css - Header Styling */
+a {
+    color: var(--accent-color);
+    text-decoration: none;;
+}
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    /* background: #051129; */ /* COMMENT OUT or REMOVE this line */
-    /* background: transparent; */ /* COMMENT OUT or REMOVE this line */
-    background-color: #e13a0d;  /* ADD THIS LINE - ඔබේ button එකේ පාට මෙතන දාන්න */
+    padding: 1rem 7%;
+    background-color: rgba(31, 31, 31, 0.8);
+    backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow if needed */
-}
-.logo{
-    position: relative;
-    font-size: 25px;
-    color: #210b24;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-}
-.theme-toggle{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-[data-bs-theme="dark"] {
-    background-color: #212529;
-    color: #f8f9f9; 
-  }
-  
-  [data-bs-theme="dark"] .sub-title {
-    color: #f8f9f9; 
-  }
-  
-  [data-bs-theme="dark"] .last-text p {
-    color: #f8f9f9; 
-  }
-  
-  [data-bs-theme="dark"] h2 {
-    color: #f8f9f9; 
-  }
-  [data-bs-theme="dark"] .about-text h2,
-[data-bs-theme="dark"] .about-text h4,
-[data-bs-theme="dark"] .about-text p,
-[data-bs-theme="dark"] .contact-text h2,
-[data-bs-theme="dark"] .contact-text h4,
-[data-bs-theme="dark"] .contact-text p,
-[data-bs-theme="dark"] .contact-list i,
-[data-bs-theme="dark"] .contact-list li {
-  color: #f8f9f9 !important; 
+    height: var(--header-height);
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
-[data-bs-theme="dark"] .contact-icons i {
-  color: #f8f9f9; 
-  border-color: #f8f9f9;
-}
-
-[data-bs-theme="dark"] .contact-icons i:hover {
-  background: #f8f9f9;
-  color: #000;
-}
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    margin-left: auto;
 }
-.navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: #210b24;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay:calc(.2s * var(--i)) ;
-}
-.container {
-    margin-left: auto; 
-}
-
-.d-flex {
-    display: flex;
-    justify-content: flex-end; 
-}
-.theme-toggle {
-    margin-left: auto; 
-    padding-right: 40px; 
-}
-.theme-toggle {
-    margin-left: auto; 
-    margin-right: 40px;
-    font-size: 1rem;
-    padding: 5px 10px;
-}
-.navbar a:hover{
-    color: #e13a0d;
-}
-/* styles.css - Home Section */
-
-/* styles.css - Home Section */
-
-.home {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    /* background: url(/imgs/home_bg.png) no-repeat; -- REMOVE or REPLACE if you don't want full bg image */
-    /* Your off-white background color from the design */
-    /* For the orange split background, you'd need a more complex setup (e.g., pseudo-element or another div)
-       Let's assume a simple background for now, or you can add the orange part later. */
-    display: flex;
-    align-items: center;
-    padding: 120px 5% 60px; /* Adjusted padding */
-    box-sizing: border-box;
-    overflow: hidden; /* Important if you use pseudo-elements for bg effects */
-}
-
-.home-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px; /* Or your site's main content width */
-    margin: 0 auto;
-    gap: 40px; /* Space between text and image area */
-}
-
-/* YOUR EXISTING .home-content styles for h1, h4, h3, p, .home-scl, .btn-box, .book-now-btn */
-/* Ensure these are present and correct from your original CSS */
-.home-content {
-    max-width: 550px; /* Adjust as needed */
-    flex: 1; /* Allow it to take available space */
-    /* Add your original animations and styles here */
-}
-.home-content h1 {
-    font-size: 3.5rem; /* Example from your previous working version */
-    font-weight: 700;
-    /* ... other styles ... */
-    opacity: 0; animation: slideRight 1s ease forwards; animation-delay: 1s; /* Your animation */
-}
-.home-content h4 { /* Sachila Geeth */
+.logo {
     font-size: 1.8rem;
-    font-weight: 500;
-    color: #55575b;
-    margin-bottom: 10px;
-    opacity: 0; animation: slideBottom 1s ease forwards; animation-delay: 0.5s;
-}
-.home-content h3 { /* And I'm a Web/Software Engineer */
-    font-size: 2rem;
     font-weight: 700;
-    opacity: 0; animation: slideBottom 1s ease forwards; animation-delay: .7s;
+    color: var(--primary-text-color);
 }
-.home-content h3 span.text { /* For the typed text */
-    color: #e13a0d; /* Your highlight color */
+
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--accent-color);
+}
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    padding-top: var(--header-height);
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.home-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 2rem;
+    min-height: calc(100vh - var(--header-height));
+}
+.home-content {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+.home-content h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    color: var(--primary-text-color);
+}
+.home-content h1 span {
+    color: var(--accent-color);
 }
 .home-content p {
     font-size: 1rem;
-    opacity: 0; animation: slideLeft 1s ease forwards; animation-delay: 1s;
-    line-height: 1.7;
-    margin-bottom: 25px; /* Space before social icons */
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+    max-width: 500px;
 }
-.home-scl { /* Container for social icons */
-    margin-bottom: 25px; /* Space before buttons */
-}
-.home-scl a {
-    display: inline-flex; justify-content: center; align-items: center;
-    width: 40px; height: 40px; background-color: transparent;
-    border: 2px solid #e13a0d; border-radius: 50%;
-    font-size: 20px; color: #e13a0d; text-decoration: none;
-    transition: .5s ease; opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i)); /* Ensure --i is set if you use this for staggered animation */
-    margin-right: 15px; /* Space between icons */
-}
-.home-scl a:hover {
-    background: #e13a0d; color: #081b08; /* Or your desired colors */
-    box-shadow: 0 0 20px #e13a0d;
-}
-.btn-box, .book-now-btn { /* Common styles for your buttons */
-    display: inline-block; padding: 12px 28px; background: #e13a0d;
-    border-radius: 40px; font-size: 16px; color: #081b08;
-    letter-spacing: 1px; text-decoration: none; font-weight: 600;
-    opacity: 0; animation: slideLeft 1s ease forwards;
-    box-shadow: 0 0 5px #e13a0d, 0 0 25px #e13a0d;
-    margin-right: 15px; /* Space between buttons */
-    margin-bottom: 10px; /* For stacking on mobile */
-}
-.btn-box:hover, .book-now-btn:hover { /* Common hover for buttons */
-    box-shadow: 0 0 5px #e13a0d, 0 0 25px #e13a0d,0 0 50px #e13a0d, 0 0 100px #e13a0d;
-}
-/* Adjust .book-now-btn if it needs slightly different styling from .btn-box */
-
-
-/* STACKED CARD SLIDER STYLES (from previous answer) */
-.home-image-area.stacked-cards-gallery {
-    flex-basis: 40%; /* Adjust based on how much space it should take */
-    max-width: 450px; /* Adjust max width of the card stack area */
-    display: flex;
-    justify-content: center; /* Center the card stack horizontally */
-    align-items: center;
-    perspective: 1000px;
-}
-
-.card-slider-wrapper {
-    position: relative;
-    width: 280px;  /* Width of the front-most card */
-    height: 380px; /* Height of the front-most card */
-                /* Adjust these to match your design's card size */
-}
-
-.hero-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                opacity 0.6s ease,
-                z-index 0s linear 0.6s;
-    background-color: #e0e0e0; /* Fallback bg */
-}
-
-.hero-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Card states for stacking effect (same as previous answer) */
-.hero-card.active-card {
-    transform: translateX(0) translateY(0) rotate(0deg) scale(1) !important;
-    opacity: 1 !important;
-    z-index: 4 !important;
-}
-.hero-card.next-card    { transform: translateX(15px) translateY(15px) rotate(4deg) scale(0.92); opacity: 0.7; z-index: 3; }
-.hero-card.third-card   { transform: translateX(30px) translateY(30px) rotate(8deg) scale(0.84); opacity: 0.4; z-index: 2; }
-.hero-card.hidden-back-card { transform: translateX(0px) translateY(0px) rotate(0deg) scale(0.75); opacity: 0; z-index: 1; }
-
-
-/* MEDIA QUERIES (Focus on adjusting the .home-container and its children) */
-@media (max-width: 991.98px) { /* Tablets */
-    .home {
-        padding: 100px 5% 40px; /* Adjust top padding for nav */
-    }
-    .home-container {
-        flex-direction: column-reverse; /* Image stack first, then text content */
-        text-align: center; /* Center text when stacked */
-    }
-    .home-content {
-        max-width: 100%; /* Allow text to take full width */
-        margin-top: 40px; /* Space between image stack and text */
-        /* Animations should still work */
-    }
-    .home-image-area.stacked-cards-gallery {
-        flex-basis: auto; /* Reset flex-basis */
-        width: 70%; /* Or a specific max-width */
-        max-width: 350px; /* Example max-width for tablet */
-        margin-bottom: 0; /* Removed margin-bottom if text is below */
-    }
-    .card-slider-wrapper { /* Adjust card stack size for tablet */
-        width: 260px;
-        height: 350px;
-    }
-    .home-scl { justify-content: center; display: flex; } /* Center social icons */
-}
-
-@media (max-width: 767.98px) { /* Mobile */
-    .home { padding: 80px 5% 30px; }
-    .home-content h1 { font-size: 2.5rem; }
-    .home-content h4 { font-size: 1.4rem; }
-    .home-content h3 { font-size: 1.6rem; }
-    .home-content p { font-size: 0.95rem; }
-
-    .card-slider-wrapper { /* Adjust card stack size for mobile */
-        width: 220px;
-        height: 300px;
-    }
-    .btn-box, .book-now-btn {
-        display: block; width: 80%; max-width: 280px; margin: 15px auto; text-align:center;
-    }
-}
-/* Keyframe animations (slideBottom, slideTop, slideRight, slideLeft) - keep these from your original CSS */
-@keyframes slideBottom { 0% { transform: translateY(100px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
-@keyframes slideTop { 0% { transform: translateY(-100px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
-@keyframes slideRight { 0% { transform: translateX(-100px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
-@keyframes slideLeft { 0% { transform: translateX(100px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
-/* styles.css - About Section */
-.about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Keeps two equal columns */
-    align-items: center; /* Vertically aligns content in grid cells */
-    gap: 0.5rem; /* කලින් 1.5rem තිබ්බේ. මේක 1rem, 0.5rem වගේ අඩු කරලා බලන්න */
-    /* Add padding to the .about section itself if you want overall spacing from edges */
-    padding: 60px 5%; /* Example padding for the whole section */
-}
-.about-img img {
-    margin-right: 20px;
-    padding-bottom: 20%;
-    max-width: 630px;
-    width: 300px !important;
-    height: auto !important;
-    border-radius: 8px;
-  }
-.about-text h2{
-    font-size: 60px;
-}
-.about-text h2 span{
-    color: #e13a0d;
-}
-.about-text h4{
-    font-size: 29px;
-    font-weight: 600;
-    color: #081b08;
-    line-height: 1.7;
-    margin: 15px 0 30px;
-}
-.about-text p{
-    color: #081b08;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-}
-#services{
-    color: #081b08;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem; 
-    align-items: center;
-}
-.sub-title{
-    text-align: center;
-    font-size: 60px;
-    padding-bottom: 70px;
-}
-.sub-title span{
-    color: #e13a0d;
-}
-.container{
-    padding: 90px;
-    align-items: center;
-}
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.social-link a {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.bx.bx-code {
-    font-size: 3rem;
-  }
-  .bx.bx-crop{
-    font-size: 3rem;
-  }
-  .fa-solid.fa-database{
-    font-size: 3rem;
-  }
-.services-list div{
-    justify-content: center;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 13px;
-    border-right: 10px;
-    border-radius: 20px;
-    transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px #e13a0d,
-               1px 1px 40px #e13a0d
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--accent-color);
+    margin-right: 1rem;
+    transition: all 0.4s ease;;
 }
-.services-list div i{
-    font-family: 50px;
-    margin-bottom: 30px;
+.social-link a:hover{
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--accent-color);
 }
-.services-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
+.cta-buttons {
+    margin-top: 2rem;
 }
-.services-list div a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.read {
-    display: inline-block;
+.btn-primary,
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
     padding: 12px 28px;
-    background: #e13a0d;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
+    border-radius: 8px;
     font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #e13a0d,
-    0 0 25px #e13a0d
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.read:hover{
-    box-shadow: 0 0 5px #e13a0d,
-    0 0 25px #e13a0d,0 0 50px #e13a0d,
-    0 0 100px #e13a0d
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(225, 107, 0, 0.3);
 }
-.services-list div:hover{
-    transform: translateY(-10px);
+.btn-secondary {
+    margin-left: 1rem;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-section {
-    display: flex;
-    flex-wrap: wrap;
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(225, 107, 0, 0.3);
 }
-.container1 {
-    width: 600px;
-    height: auto; 
-    padding: 75px 90px;
-    margin-left: 120px;
+.home-image-area {
+    align-self: flex-end; 
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.3s;
 }
-.heading1 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-
-.Technical-bars {
-    margin-top: 20px; 
-}
-.Technical-bars .bar {
-    margin-bottom: 25px; 
-}
-
-.Technical-bars .bar:first-child {
-    margin-top: 0;
-}
-
-.Technical-bars .bar:last-child {
-    margin-bottom: 0;
-}
-.Technical-bars .bar .info {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 5px;
-}
-
-.Technical-bars .bar .info i{
-    font-size: 23px;
-    margin-right: 10px;
-}
-.Technical-bars .bar .info span {
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-.Technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: #000000;
-    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
-    }
-}
-.Technical-bars .bar .progress-line span {
-    height: 100%;
-    background-color: #e13a0d;
-    position: absolute;
-    border-radius: 10px;
-    animation: animateProgress 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards; /* Changed animation name*/
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-.progress-line.html span {
-    width: 90%;
-}
-
-.progress-line.css span {
-    width: 60%;
-}
-
-.progress-line.JavaScript span {
-    width: 85%;
-}
-
-.progress-line.php span {
-    width: 80%;
-}
-
-.progress-line.Javafx span {
-    width: 50%;
-}
-.progress-line span::after {
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-
-.progress-line.html span::after {
-    content: attr(data-progress) "%";
-}
-
-.progress-line.css span::after {
-    content: attr(data-progress) "%";
-}
-
-.progress-line.JavaScript span::after {
-    content: attr(data-progress) "%";
-}
-
-.progress-line.php span::after {
-    content: attr(data-progress) "%";
-}
-
-.progress-line.Javafx span::after {
-    content: attr(data-progress) "%";
-}
-
-.progress-line span::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: #000;
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-@keyframes showText {
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes animateProgress {
-    100%{
-        transform: scaleX(1);
-    }
-}
-.redial-bars{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-.redial-bars .radial-bar{
-    width: 50%; 
-    height: 170px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.radial-bar svg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 120px;
-    height: 160px;
-}
-.radial-bar .progress-bar{
-    stroke-width: 10;
-    stop-color: black;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
-   
-}
-@keyframes animate-bar{
-    100%{
-        stroke-dashoffset: -1;
-    }
-}
- .path {
-    stroke-width: 10;
-    stroke: #e13a0d;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-}
-.path-1{animation: animate-path1 1s 1s linear forwards;}
-.path-2{animation: animate-path2 1s 1s linear forwards;}
-.path-3{animation: animate-path3 1s 1s linear forwards;}
-.path-4{animation: animate-path4 1s 1s linear forwards;}
-
-@keyframes animate-path1 {
-    100%{
-        stroke-dashoffset: 50;
-    }
-}
-@keyframes animate-path2 {
-    100%{
-        stroke-dashoffset: 175;
-    }
-}
-@keyframes animate-path3 {
-    100%{
-        stroke-dashoffset: 125;
-    }
-}
-@keyframes animate-path4 {
-    100%{
-        stroke-dashoffset: 75;
-    }
-}
-.radial-bar .percentage{
+.background-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+    font-size: 9vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.04);
+    z-index: 1; 
+    user-select: none;
+    white-space: nowrap;
 }
-.redial-bar .text{
+.hero-image-wrapper, .home-image-area {
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.3s;
+    z-index: 2;
+}
+.hero-image {
     width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50px);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0px 25px 40px rgba(0,0,0,0.2));
 }
-
-#portfolio {
-    padding: 80px 10%;
-    animation: slideInRight 1s ease-in-out;
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
-
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 @keyframes slideInRight {
     from {
-        transform: translateX(100%);
+        transform: translateX(150px);
         opacity: 0;
     }
     to {
@@ -693,283 +192,198 @@ section {
     }
 }
 
-.main-text h2 {
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.main-text h2 span {
-    color: #e13a0d;
-}
-
-.portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 30px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-wrap: wrap; 
-}
-
-.row {
-    -webkit-text-fill-color: #fff;
-    position: relative;
-    flex-direction: row;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease; 
-    margin: 20px;
-    width: 300px;
-}
-
-.row:hover {
-    transform: scale(1.05); 
-}
-
-.row img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.row:hover .layer {
-    opacity: 1;
-}
-
-.layer h5 {
-    color: #060606;
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.layer p {
-    color: #060606;
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 0 20px;
-}
-
-.layer a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #060606;
-    font-size: 1.2em;
-    background-color: #e13a0d;
-    padding: 10px 15px;
-    border-radius: 50%;
-    transition: transform 0.3s ease; 
-}
-
-.layer a:hover {
-    transform: scale(1.1);
-}
-.contact{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    gap: 3rem;
-    padding-left: 30px;
-    margin-top: 130px;
-}
-.contact-text h2{
-    font-size: 90px;
-    line-height: 1;
-    text-align: center;
-}
-.contact-text h2 span{
-    color: #e13a0d;
-}
-.contact-text h4{
-    margin: 15px 0;
-    color: #060606;
-    font-size: 20px;
-    font-weight: 600;
-}
-.contact-text p{
-    color: #060606;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 2rem;
-}
-.contact-list{
-    margin-bottom: 3rem;
-}
-.contact-list li{
-    margin-bottom: 10px;
-    display: block;
-}
-.contact-list i{
-    display: inline-block;
-    color: #e13a0d;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all .40s ease;
-}
-.contact-list li a:hover{
-    transform: scale(1.01) translateY(-5px);
-    color: #e13a0d;
-}
-.contact-icons i{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #e13a0d;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #e13a0d;
-    text-decoration: none;
-    margin: 30px 15px 30px 0;
-    transition: .5s ease;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-}
-.contact-icons i:hover{
-    background: #e13a0d;
-    color: #000;
-    box-shadow: 0 0 20px #e13a0d;
-}
-.contact-form form{
-    position: relative;
-}
-.contact-form form input,form textarea{
-    border: none;
-    outline: none;
-    width: 90%;
-    padding: 18px;
-    background: #555557;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-}
-.contact-form textarea{
-    resize: none;
-    height: 220px;
-}
-.contact-form form .send{
-    display: inline-block;
-    padding: 14px 60px;
-    background: #e13a0d;
-    border-radius: 40px;
-    font-size: 18px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #e13a0d,
-    0 0 25px #e13a0d
-}
-
-.contact-form form .send:hover{
-    box-shadow: 0 0 5px #e13a0d,
-    0 0 25px #e13a0d,0 0 50px #e13a0d,
-    0 0 100px #e13a0d
-}
-.last-text p{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #f75c32;
-    font-weight: 300;
-    margin-top: 70px;
-}
-.tp{
-    position: fixed;
-    bottom: 2.1rem;
-    right: 2.1rem;
-}
-.top i{
-    color: #000000;
-    background: #e13a0d;
-    font-size: 20px;
-    padding: 10px;
-}
-
-
-
-@keyframes showText{
-    100%{
-        opacity: 1;
+@media (max-width: 992px) {
+    .header {
+        padding: 1rem 4%;
     }
-}
-@keyframes animate-bar {
-    100%{
-        stroke-dashoffset: 0;
+
+    .home {
+        padding: 0 4%;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .home-content {
+        order: 2;
+        max-width: 100%;
+        animation: none;
+        animation: slideInUp 1s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+
+    .home-image-area {
+        order: 1;
+        position: static;
+        width: 100%;
+        margin-bottom: 2rem;
+        animation: none;
+        animation: slideInUp 1s ease-out forwards;
+    }
+
+    .hero-image {
+        max-width: 300px; /* Tablet view එකේදී */
+        margin: 0 auto;
+        filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.4));
+    }
+    
+    .background-text {
+        font-size: 20vw;
+        top: 50%;
+    }
+
+    .social-links, .cta-buttons {
+        justify-content: center;
     }
 }
 
 
-
-
-
-
-@keyframes slideRight{
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
+/* ----------- Breakpoint 2: Small Devices (Mobiles, < 768px) ----------- */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
     }
-    100%{
-        transform: translateX(0%);
-        opacity: 1;
+    
+    .home-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* අලුතෙන් එකතු කරපු වෙනස මෙන්න */
+    .hero-image {
+        max-width: 250px; /* Mobile view එකේදී තවත් පොඩි කරනවා */
     }
 }
-@keyframes slideLeft{
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
 
-@keyframes slideTop{
-    0%{
+
+/* ----------- Mobile-Specific Animations ----------- */
+@keyframes slideInUp {
+    from {
         transform: translateY(100px);
         opacity: 0;
     }
-    100%{
-        transform: translateP (0%);
+    to {
+        transform: translateY(0);
         opacity: 1;
     }
 }
-@keyframes slideBottom{
-    0%{
-        transform: translateY(-100px);
-        opacity: 0;
+/* ================================================================ */
+/*                ABOUT & SERVICES SECTION (Corrected CSS)            */
+/* ================================================================ */
+
+.about {
+    padding: 6rem 7%; 
+    background-color: #1A1A1A; 
+}
+
+/* ----- Part 1: About Me Container ----- */
+.about-me-container {
+    display: grid;
+    /* Columns 2ක් හදනවා. පළවෙනි එකට 40%, දෙවෙනි එකට 60% ඉඩ. */
+    grid-template-columns: 40% 60%;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 6rem; /* Services section එකෙන් ඉඩ තියන්න */
+}
+.about-image-container img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 15px;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.about-content-container {
+    /* Styles for the right side content block */
+}
+
+/* Heading ("About Me") */
+.section-heading-left {
+    text-align: left;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.about-paragraph {
+    color: var(--secondary-text-color);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* --- Stats Boxes (වැදගත්ම කොටස) --- */
+.stats-container {
+    display: flex;         /* Stats ටික එක පේළියක තියන්න */
+    flex-wrap: wrap;       /* ඉඩ මදි නම් ඊළඟ පේළියට යන්න */
+    gap: 2.5rem;           /* Boxes අතරේ ඉඩ */
+    margin-bottom: 2.5rem;
+}
+.stat-box {
+    text-align: left;
+}
+.stat-box h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+.stat-box p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+}
+
+
+/* ----- Part 2: Services Container ----- */
+.services-container {
+    /* මෙම container එකට styles අවශ්‍ය නොවේ */
+}
+.section-heading-center {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.service-card {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+.service-card:hover { transform: translateY(-10px); border-color: var(--accent-color); }
+.service-card i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
+.service-card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; }
+.service-card p { color: var(--secondary-text-color); line-height: 1.6; }
+
+
+/* ----- Responsive Styles ----- */
+@media (max-width: 992px) {
+    .about-me-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
     }
-    100%{
-        transform: translateP (0px);
-        opacity: 1;
-    }
+    .about-image-container { margin-bottom: 2rem; display: flex; justify-content: center; }
+    .section-heading-left { text-align: center; }
+    .stats-container { justify-content: center; }
+}
+@media (max-width: 1200px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
 }
