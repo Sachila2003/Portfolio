@@ -24,17 +24,24 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <a href="#" class="logo">Sachila Geeth</a>
 
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#skills" style="--i:3">Skills</a>
-            <a href="#portfolio" style="--i:4">Portfolio</a>
-            <a href="#testimonials" style="--i:5">Testimonials</a>
-            <a href="#contact" style="--i:6">Contact</a>
+        <nav class="navbar" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </nav>
+
+        <!-- Hamburger Menu Toggle Button -->
+        <div class="nav-toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
     <main>
         <section class="home" id="home">
@@ -46,8 +53,9 @@
                     <p> I'm a software engineer passionate about building robust and efficient web applications,
                         turning complex problems into elegant digital solutions.</p>
                     <div class="social-link">
-                        <a href="#" style="--i:7"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" style="--i:8"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sachila-geeth-094576344/" style="--i:7"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Sachila2003" style="--i:8"><i class="fab fa-github"></i></a>
                     </div>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn-primary">Get In Touch</a>
@@ -421,15 +429,25 @@
                         showcased a deep understanding of software design patterns and a keen eye for detail. He is a
                         quick learner and a great team player."
                     </p>
-                    <h4 class="testimonial-author">Mr. Uditha Landekubura</h4>
+                    <h4 class="testimonial-author">Mr.Uditha Landekubura</h4>
+                    <span class="testimonial-title">University Lecturer</span>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Sachila consistently demonstrated a strong grasp of complex technical concepts,
+                        particularly in backend development and system architecture.
+                        He is a dedicated and resourceful developer who is not afraid to tackle challenging problems.
+                        I am confident that he will be a valuable asset to any software engineering team."
+                    </p>
+                    <h4 class="testimonial-author">Mr.A.A.Sachintha Madhushan</h4>
                     <span class="testimonial-title">University Lecturer</span>
                 </div>
                 <div class="testimonial-card">
                     <p class="testimonial-text">
                         "Working with Sachila was an absolute pleasure. He took our vision for the ElegantImage
-                         website and turned it into a stunning, professional, and fully functional reality.
-                          His technical expertise and eye for design were evident throughout the process. 
-                          He delivered a final product that exceeded our expectations."
+                        website and turned it into a stunning, professional, and fully functional reality.
+                        His technical expertise and eye for design were evident throughout the process.
+                        He delivered a final product that exceeded our expectations."
                     </p>
                     <h4 class="testimonial-author">Founder, ElegantImage</h4>
                     <span class="testimonial-title">Client</span>
@@ -438,10 +456,10 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">
                         "I had the privilege of working with Sachila on the FullStack Craft project,
-                         where he was the lead developer. His leadership and technical skills were exceptional.
-                         He's not just a talented full-stack developer;
-                         he's also a great mentor who fosters a collaborative and positive team spirit.
-                         He knows how to drive a project to a successful launch."
+                        where he was the lead developer. His leadership and technical skills were exceptional.
+                        He's not just a talented full-stack developer;
+                        he's also a great mentor who fosters a collaborative and positive team spirit.
+                        He knows how to drive a project to a successful launch."
                     </p>
                     <h4 class="testimonial-author">Imesh Ramanaka</h4>
                     <span class="testimonial-title">Project Teammate</span>
@@ -452,7 +470,7 @@
                 <h3 class="sub-heading">Leave a Recommendation</h3>
                 <p>If we've worked together, I'd love to hear your feedback!</p>
 
-                <form id="testimonial-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                <form id="testimonial-form" action="https://formspree.io/f/mkgzenga" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="text" name="title" placeholder="Your Title (e.g., Colleague, Client)" required>
                     <textarea name="message" rows="5" placeholder="Your recommendation..." required></textarea>
@@ -461,10 +479,68 @@
             </div>
 
         </section>
-        <div class="last-text">
-            <p>Developed with love by Sachila Geeth 2025</p>
-        </div>
-        <a href="" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+        <section class="contact" id="contact">
+            <h2 class="section-heading-center" data-aos="fade-up">Get In Touch</h2>
+            <p class="section-subheading" data-aos="fade-up" data-aos-delay="100">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            </p>
+
+            <div class="contact-container">
+
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to me directly through any of the following methods.</p>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <span>sachilageeth1@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <span>+94 77 5811481</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links-contact">
+                        <a href="https://www.linkedin.com/in/sachila-geeth-094576344/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Sachila2003" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left" data-aos-delay="300">
+                    <h3>Send Me a Message</h3>
+                    <form id="contact-form" action="https://formspree.io/f/xblkbjdj" method="POST">
+                        <input type="hidden" name="_next" value="https://sachila2003.github.io/Portfolio/thank-you.html">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/sachila-geeth-094576344/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sachila2003" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="copyright-text">
+                    Copyright &copy; 2025 by Sachila Geeth | All Rights Reserved.
+                </p>
+                <a href="#home" class="back-to-top" title="Back to Top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </footer>
     </main>
 
     <div class="modal-overlay" id="projectModal">

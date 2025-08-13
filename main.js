@@ -9,6 +9,56 @@ try {
 } catch (error) {
     console.warn("Typed.js couldn't find the '.text' element. This is normal if you have removed the element.");
 }
+const header = document.getElementById('header');
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// --- 1. Header Scroll Effect ---
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// --- 2. Hamburger Menu Toggle ---
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+        }
+    });
+});
+
+// --- 3. Active Link on Scroll ---
+const sections = document.querySelectorAll('section[id]');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === entry.target.id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}, { threshold: 0.5 }); // Section එක 50%ක් පෙනුනම active වෙනවා
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
 //filter button
 
 // Select ALL buttons with the class '.filter-btn'
