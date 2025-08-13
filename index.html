@@ -250,9 +250,16 @@
             <p class="section-subheading" data-aos="fade-up" data-aos-delay="100">
                 A selection of my recent work. Hover over the images for more options.
             </p>
+            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <!-- <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                <button class="filter-btn" data-filter="ui-ux">UI/UX Design</button> -->
+            </div>
 
             <div class="portfolio-grid">
-                <div class="project-card" data-aos="fade-up" data-title="Photographer's Portfolio Website"
+                <div class="project-card" data-aos="fade-up" data-category="fullstack" data-title="Photographer's Portfolio Website"
                     data-img="imgs/elegantimage.png"
                     data-desc="This is a fully responsive portfolio website developed from scratch for a professional photographer. It features a clean, visually appealing user interface and a complete admin panel for content management, allowing the photographer to easily Create, Read, Update, and Delete gallery images and other content."
                     data-tech="HTML, CSS, JavaScript, PHP, MySQL"
@@ -272,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-category="fullstack backend"
+                <div class="project-card" data-aos="fade-up" data-category="fullstack"
                     data-title="FullStack Craft - Official Website" data-img="imgs/fullstackcraft.png"
                     data-desc="As the lead developer, I spearheaded the end-to-end creation of the official FullStack Craft website, a professional platform designed to showcase our development services. This project involved transforming a concept into a fully functional, live web application.
 
@@ -322,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-category="backend fullstack"
+                <div class="project-card" data-aos="fade-up" data-category="fullstack"
                     data-title="Point of Sale (POS) System" data-img="imgs/pos.png"
                     data-desc="This comprehensive Point of Sale (POS) system was developed using a robust MVC (Model-View-Controller) architecture to ensure a clean separation of concerns and maintainability. The system provides a complete solution for retail management with a strong focus on security and business intelligence.
 
@@ -437,10 +444,6 @@
         </div>
         <a href="" class="top"><i class='bx bx-up-arrow-alt'></i></a>
     </main>
-
-    <!-- ================================================================ -->
-    <!--              PROJECT DETAILS MODAL (Add this to your HTML)     -->
-    <!-- ================================================================ -->
 
     <div class="modal-overlay" id="projectModal">
         <div class="modal-content">
